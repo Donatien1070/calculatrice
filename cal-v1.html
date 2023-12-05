@@ -71,8 +71,7 @@
 
     function calculateResult() {
         try {
-            let result = new Function('return ' + document.getElementById('display').value)();
-            document.getElementById('display').value = result;
+            document.getElementById('display').value = eval(document.getElementById('display').value);
         } catch (error) {
             document.getElementById('display').value = 'Error';
         }
